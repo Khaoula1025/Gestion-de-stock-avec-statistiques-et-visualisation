@@ -1,6 +1,6 @@
 import numpy as np
 
-stock = np.array([
+products = np.array([
     ["Stylo", 50, 2.5],
     ["Cahier", 30, 12.0],
     ["Sac à dos", 15, 250.0],
