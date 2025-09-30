@@ -27,6 +27,11 @@ def prix_min_max():
                count= count+1
      return f"Prix maximum {prix_max} , Prix minimum {prix_min}"
 
+def averagePrice(n):
+    prix_unitaire=n[:,2]
+    return np.mean(prix_unitaire)
+
+print('moyen :',averagePrice(products))
  
 print(val_total_stock(products))
 print(prix_min_max())
