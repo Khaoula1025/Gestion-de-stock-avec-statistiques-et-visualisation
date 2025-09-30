@@ -1,7 +1,7 @@
 import stats
 import visualize
 import stock
-from data import products
+
 def menu(products):
     newData=products
     choix = 0
@@ -38,6 +38,6 @@ def menu(products):
                 visualize.bar_chart(newData)
             case 7  :
                 break
-menu(products)
+
     
     
