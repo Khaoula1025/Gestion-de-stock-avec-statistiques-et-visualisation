@@ -1,9 +1,9 @@
 import numpy as np
 import data as produit
-def mettreAjourQ(n):
+def mettreAjourQ(products):
     choix=input('enter product name : ')
     found=False
-    for i in n:
+    for i in products:
         if i[0].lower()==choix.lower() :
              q=int(input('enter the new quantity : '))
              i[1]=q
@@ -12,11 +12,11 @@ def mettreAjourQ(n):
     if not found :
             print('product not found ')
            
-    return n
+    return products
 
 products =produit.products
-def ajouter_produit():
-    global products
+def ajouter_produit(products):
+    # global products
     nom_produit= input("inserer nom produit: ")
     prix= float(input("inserer le prix du produit: "))
     quantite= int(input("inserer la quantite du produit"))
