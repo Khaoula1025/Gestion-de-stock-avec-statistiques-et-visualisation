@@ -18,4 +18,3 @@ def bar_chart(products):
     plt.bar(x,y)
     plt.show()
     plt.savefig('documents/bar_chart.png')
-
