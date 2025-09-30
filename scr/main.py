@@ -1,3 +1,7 @@
 from data import products
-import stock 
-print('mise a jour : ',stock.mettreAjourQ(products) )
+from menu import menu
+
+products = products
+
+if __name__ == '__main__':
+    menu(products)
