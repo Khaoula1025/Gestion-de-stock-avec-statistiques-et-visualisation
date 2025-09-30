@@ -23,10 +23,10 @@ def ajouter_produit():
     new_produit= [nom_produit, prix, quantite]
     products = np.vstack([produit.products , new_produit])
     print(products)
+# ajouter_produit()
 
 
-def delete_product():
-    
+def delete_product(products):
     product_name = input("donner le nom du produit : ")
     product_index = None
     for i,product in enumerate(products):
@@ -39,8 +39,6 @@ def delete_product():
         return new_list
     else:
         return 'produit introuvable'
-# print(delete_product(products))
-
-
+print(delete_product(products))
 
 
