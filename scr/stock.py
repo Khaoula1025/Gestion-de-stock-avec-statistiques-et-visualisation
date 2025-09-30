@@ -11,19 +11,13 @@ def mettreAjourQ(products):
              break
     if not found :
             print('product not found ')
-           
-    return products
-
-products =produit.products
 def ajouter_produit(products):
     # global products
     nom_produit= input("inserer nom produit: ")
     prix= float(input("inserer le prix du produit: "))
     quantite= int(input("inserer la quantite du produit"))
     new_produit= [nom_produit, prix, quantite]
-    products = np.vstack([produit.products , new_produit])
-    print(products)
-# ajouter_produit()
+    return np.vstack([products , new_produit])
 
 
 def delete_product(products):
@@ -35,10 +29,13 @@ def delete_product(products):
             break 
         
     if product_index is not None:
-        new_list = np.delete(products, product_index,axis=0)
-        return new_list
+        return np.delete(products, product_index,axis=0)
     else:
         return 'produit introuvable'
+
+def afficherStock(products):
+     print(products)
+     
 #print(delete_product(products))
 
 
