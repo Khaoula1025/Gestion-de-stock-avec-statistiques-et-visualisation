@@ -39,6 +39,6 @@ def delete_product(products):
         return new_list
     else:
         return 'produit introuvable'
-print(delete_product(products))
+#print(delete_product(products))
 
 
