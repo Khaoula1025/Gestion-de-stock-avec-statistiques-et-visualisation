@@ -1,6 +1,5 @@
 import numpy as np
 import data as produit
-
 def mettreAjourQ(n):
     choix=input('enter product name : ')
     found=False
@@ -17,8 +16,9 @@ def mettreAjourQ(n):
 
 products =produit.products
 def ajouter_produit():
+    global products
     nom_produit= input("inserer nom produit: ")
-    prix= input("inserer le prix du produit: ")
+    prix= float(input("inserer le prix du produit: "))
     quantite= int(input("inserer la quantite du produit"))
     new_produit= [nom_produit, prix, quantite]
     products = np.vstack([produit.products , new_produit])
@@ -39,6 +39,6 @@ def delete_product(products):
         return new_list
     else:
         return 'produit introuvable'
-print(delete_product(products))
+#print(delete_product(products))
 
 
