@@ -10,4 +10,12 @@ def pie_chart():
     
      plt.pie(val_pr, labels= pr_name)
      plt.show()
-pie_chart()
+
+#pie_chart()
+
+def bar_chart():
+    x=products[:,1]
+    y=products[:,2]
+    plt.bar(x,y)
+    plt.show()
+bar_chart()
