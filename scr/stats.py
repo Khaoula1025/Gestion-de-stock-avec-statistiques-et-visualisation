@@ -1,6 +1,5 @@
 import numpy as np
 import stock as stock
-products = stock.products
 
 def val_total_stock(products):
     quantite = products[:,1]
@@ -31,7 +30,7 @@ def averagePrice(products):
     prix_unitaire=products[:,2]
     return np.mean(prix_unitaire)
 
-print('moyen :',averagePrice(products))
+#print('moyen :',averagePrice(products))
 
 def product_expensive_cheaper(products):
      min_max = prix_min_max(products)

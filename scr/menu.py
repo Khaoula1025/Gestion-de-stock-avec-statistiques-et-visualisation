@@ -1,8 +1,9 @@
 import stats
 import visualize
 import stock
-products = stock.products
+from data import products
 def menu(products):
+    newData=products
     choix = 0
     while True:
         print('1. Ajouter un produit. ')
@@ -16,25 +17,25 @@ def menu(products):
         match choix :
             case 1  :
                 print('-------- Ajouter Produit -----------\n')
-                stock.ajouter_produit(products)
+                newData=stock.ajouter_produit(newData)
             case 2  :
                 print('-------- Supprimer Produit -----------\n')
-                stock.delete_product(products)
+                newData=stock.delete_product(newData)
             case 3  :
                 print('-------- Modifier Produit -----------\n')
-                stock.mettreAjourQ(products)
+                stock.mettreAjourQ(newData)
             case 4  :
-                pass
+                stock.afficherStock(newData)
             case 5  :
                 print('-------- les statistiques du stock -----------\n')
-                stats.val_total_stock(products)
-                stats.averagePrice(products)
-                stats.prix_min_max(products)
-                stats.product_expensive_cheaper(products)
+                stats.val_total_stock(newData)
+                stats.averagePrice(newData)
+                stats.prix_min_max(newData)
+                stats.product_expensive_cheaper(newData)
             case 6  :
                 print('-------- Visualisations -----------\n')
-                visualize.pie_chart(products)
-                visualize.bar_chart(products)
+                visualize.pie_chart(newData)
+                visualize.bar_chart(newData)
             case 7  :
                 break
 menu(products)

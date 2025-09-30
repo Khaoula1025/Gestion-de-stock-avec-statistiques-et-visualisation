@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import stock as stock
-products = stock.products
 def pie_chart(products):
      pr_name= []
      val_pr= []
@@ -10,12 +9,12 @@ def pie_chart(products):
     
      plt.pie(val_pr, labels= pr_name)
      plt.show()
+     plt.savefig('documents/pie_chart.png')
 
-#pie_chart()
 
 def bar_chart(products):
     x=products[:,1]
     y=products[:,2]
     plt.bar(x,y)
     plt.show()
-# bar_chart()
+    plt.savefig('documents/bar_chart.png')
